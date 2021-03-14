@@ -2,13 +2,8 @@ import collections
 import io
 import os
 import unittest
-
-try:
-    from xmlrpc import client as xmlrpclib
-    from urllib import request as urllib
-except ImportError:
-    import xmlrpclib
-    import urllib
+from xmlrpc import client as xmlrpclib
+from urllib import request as urllib
 
 from pyroma import projectdata, distributiondata, pypidata
 from pyroma.ratings import rate

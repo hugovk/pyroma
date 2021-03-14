@@ -2,13 +2,8 @@ import tempfile
 import os
 import logging
 from pyroma import distributiondata
-
-try:
-    from xmlrpc import client as xmlrpclib
-    from urllib import request as urllib
-except ImportError:
-    import xmlrpclib
-    import urllib
+from xmlrpc import client as xmlrpclib
+from urllib import request as urllib
 
 
 def _get_client():
