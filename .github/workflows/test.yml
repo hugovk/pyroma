@@ -29,6 +29,8 @@ jobs:
           allow-prereleases: true
       - name: Upgrade pip
         run: python -m pip install --upgrade pip
+      - name: Temporarily install CFFI pre-release supporting Python 3.13
+        run: pip install --upgrade cffi --pre
       - name: Install package
         run: pip install -e .[test]
       - name: Run tests
